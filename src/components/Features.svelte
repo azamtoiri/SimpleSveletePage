@@ -20,11 +20,7 @@
 		<div class="grid gap-8 md:grid-cols-3">
 			{#each content.items as item}
 				<div class="flex flex-col items-center rounded-lg bg-white p-6 shadow-sm">
-					<!-- <svelte:component 
-              this={iconMap[item.icon]}
-              class="w-12 h-12 text-blue-600 mb-4"
-            /> -->
-					<h3 class="mb-2 text-xl font-semibold">{item.title}</h3>
+					<h3 class="mb-2 text-center text-xl font-semibold">{item.title}</h3>
 					<p class="text-center text-gray-600">{item.description}</p>
 				</div>
 			{/each}

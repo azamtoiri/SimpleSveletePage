@@ -3,16 +3,23 @@
 	import { fade } from 'svelte/transition';
 
 	export let content = {
-		title: 'Наши популярные товары',
+		title: 'Our products',
 		products: []
 	};
 
 	let selectedProduct = null;
 </script>
 
-<section class="bg-gray-100 py-16">
-	<div class="container mx-auto px-4">
-		<h2 class="mb-12 text-center text-4xl font-bold text-gray-800">{content.title}</h2>
+<section
+	class="flex flex-1 flex-col items-center justify-center gap-10 pb-10 sm:gap-14 md:gap-24 md:pb-14"
+>
+	<div class="container mx-auto flex flex-1 flex-col px-4">
+		<h2
+			class="mb-12 text-center text-4xl
+		font-bold text-gray-800"
+		>
+			{content.title}
+		</h2>
 
 		<div class="grid gap-6 md:grid-cols-4">
 			{#each content.products as product}
@@ -23,7 +30,7 @@
 					on:mouseleave={() => (selectedProduct = null)}
 				>
 					<img
-						src={product.image || `/api/placeholder/300/400`}
+						src={product.image || `/api/`}
 						alt={product.name}
 						class="h-64 w-full transform object-cover transition duration-300 group-hover:scale-110"
 					/>

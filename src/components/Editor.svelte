@@ -20,6 +20,7 @@
 
 {#if $editorStore.editMode}
 	<div class="editor-overlay">
-		<textarea bind:value={component.content} on:blur={() => saveChanges(component.content)} />
+		<textarea bind:value={component.content} on:blur={() => saveChanges(component.content)}
+		></textarea>
 	</div>
 {/if}

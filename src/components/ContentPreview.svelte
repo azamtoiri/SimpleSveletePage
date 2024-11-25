@@ -15,7 +15,7 @@
 
 	async function saveChanges() {
 		try {
-			const response = await fetch(`/api/components/${component.id}`, {
+			const response = await fetch(`/api/page/components/${component.id}`, {
 				method: 'PATCH',
 				body: JSON.stringify({ content: localContent }),
 				headers: {

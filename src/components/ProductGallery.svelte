@@ -1,5 +1,5 @@
 <script>
-	import { Heart, ShoppingCart } from 'lucide-react';
+	import { Heart, ShoppingCart } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 
 	export let content = {

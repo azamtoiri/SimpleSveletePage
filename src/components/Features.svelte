@@ -1,5 +1,5 @@
 <script>
-	import { Shield, Truck, CreditCard } from 'lucide-react';
+	import { Shield, Truck, CreditCard } from 'lucide-svelte';
 
 	export let content = {
 		title: '',

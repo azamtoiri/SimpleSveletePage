@@ -31,9 +31,9 @@
 	"dependencies": {
 		"@tailwindcss/typography": "^0.5.15",
 		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
 		"express": "^4.21.1",
 		"http-proxy-middleware": "^3.0.3",
-		"lucide-react": "^0.460.0",
 		"lucide-svelte": "^0.460.1"
 	}
 }

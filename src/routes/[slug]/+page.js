@@ -1,3 +1,4 @@
+// +page.js
 export async function load({ params, fetch }) {
 	const response = await fetch(`/api/pages/${params.slug}`);
 	if (response.ok) {
@@ -20,5 +21,6 @@ export async function load({ params, fetch }) {
 	}
 }
 
-export const ssr = true;
-export const csr = false;
+// export const prerender = true; // Рендеринг на сервере
+export const ssr = true; // Поддержка SSR
+export const csr = false; // Отключить CSR

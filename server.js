@@ -1,4 +1,5 @@
 import express from 'express';
+import ViteExpress from 'vite-express';
 
 // Constants
 const port = process.env.PORT || 5173;
@@ -6,6 +7,7 @@ const base = process.env.BASE || '/';
 
 // Create http server
 const app = express();
+ViteExpress.config({ mode: 'production' });
 
 // Add Vite or respective production middlewares
 let vite;
@@ -16,7 +18,4 @@ vite = await createServer({
 });
 app.use(vite.middlewares);
 
-// Start http server
-app.listen(port, () => {
-	console.log(`Server started at http://localhost:${port}`);
-});
+ViteExpress.listen(app, 3000, () => console.log(`Server is listening...${port}`));

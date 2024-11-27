@@ -1,6 +1,7 @@
-// +page.js
+import { env } from '$env/dynamic/private';
+
 export async function load({ params, fetch }) {
-	const response = await fetch(`/api/pages/${params.slug}`);
+	const response = await fetch(`${env.VITE_API_URL}/api/pages/${params.slug}`);
 	if (response.ok) {
 		const page = await response.json();
 		return {
@@ -21,6 +22,5 @@ export async function load({ params, fetch }) {
 	}
 }
 
-// export const prerender = true; // Рендеринг на сервере
-export const ssr = true; // Поддержка SSR
-export const csr = false; // Отключить CSR
+export const ssr = true;
+export const csr = false;
